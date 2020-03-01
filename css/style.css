@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script|Montserrat|Raleway|Roboto+Slab&display=swap&subset=latin-ext");
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  font-family: "Montserrat", Sans-Serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #fed136;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1424px;
+  border: 1px solid black;
+}
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.section-title {
+  font-size: 40px;
+  color: #222222;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.section-subtitle {
+  color: #777777;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Splash */
+.navigation {
+  padding: 12px 0;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 34px;
+}
+
+.splash {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0 24px;
+  background-image: url("../images/background-image.png");
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+  /*
+  background: linear-gradient(to right, rgba(#272727, 0.9), rgba(#272727, 0.3)),
+    url("../images/background-image.png") center top;
+  */
+}
+
+.splash .page-intro {
+  margin: auto;
+}
+
+.splash .page-intro .main-title {
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+  font-family: "Raleway", Sans-Serif;
+}
+
+.splash .page-intro .main-subtitle {
+  margin: 12px 0 60px 0;
+  color: #fff;
+  font-size: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.splash .page-intro .btn {
+  padding: 18px 24px;
+  font-size: 18px;
+  background: #fed136;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.splash .page-intro .btn:hover {
+  background: #fece27;
+  color: #fff;
+}
+
+/* Services */
+.service {
+  -ms-flex: 0 0 33.33%;
+      flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin: 24px 0 0 0;
+}
+
+.service i {
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  color: #fed136;
+  font-size: 28px;
+  border-radius: 50%;
+  border: 3px solid #fed136;
+}
+
+.service .service-title {
+  margin: 24px 0 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service .service-description {
+  margin: 24px 0 0 0;
+  padding: 0 24px;
+  font-size: 14px;
+  color: #777777;
+  font-family: "Roboto Slab", Sans-Serif;
+}
+
+/* Portfolio */
+.portfolio {
+  background: #f7f7f7;
+}
+
+.portfolio .portfolio-item {
+  -ms-flex: 0 0 29%;
+      flex: 0 0 29%;
+  max-width: 29%;
+  margin: 50px 0 0 0;
+  border: 1px solid black;
+}
+
+.portfolio .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Contact */
+.contact p {
+  border: 1px solid blue;
+}
+
+.contact .social-links {
+  list-style-type: none;
+  padding: 0;
+  display: inline;
+  border: 1px solid orange;
+}
+
+.contact .social-links li {
+  display: inline-block;
+  font-size: 0;
+}
+
+.contact .social-links li a {
+  color: #fff;
+}
+
+.contact .social-links li a i {
+  font-size: 18px;
+  background: #222222;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+}
+/*# sourceMappingURL=style.css.map */
