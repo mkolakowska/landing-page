@@ -6,15 +6,15 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
   color: #222222;
   font-size: 16px;
   line-height: 1.7;
   margin: 0;
   height: 100%;
   text-align: center;
-  font-family: "Montserrat", Sans-Serif;
+  font-family: "Raleway", Sans-Serif;
+  background: #222222;
 }
 
 a,
@@ -35,8 +35,7 @@ section {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1424px;
-  border: 1px solid black;
+  max-width: 1098px;
 }
 
 .wrapper {
@@ -54,48 +53,73 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
+  font-family: "Montserrat", Sans-Serif;
 }
 
 .section-subtitle {
+  display: block;
   color: #777777;
   font-weight: 400;
   font-style: italic;
+  font-family: "Raleway", Sans-Serif;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1557px;
+  background: #fff;
 }
 
 /* Splash */
-.navigation {
+.splash {
+  padding: 0 24px;
+  /*
+  background-image: url("../images/background-image.png");
+  */
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.5)), url("../images/background-image.png") center top;
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 700px;
+  position: relative;
+}
+
+.splash .navigation {
   padding: 12px 0;
 }
 
-.navigation ul {
-  margin: 0;
-  padding: 0;
+.splash .navigation p {
+  color: #fed136;
+  font-family: "Oleo Script", Sans-Serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
 }
 
-.navigation ul li {
+.splash .navigation ul {
+  margin: auto 0;
+}
+
+.splash .navigation ul li {
   display: inline-block;
   margin-right: 34px;
 }
 
-.splash {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  padding: 0 24px;
-  background-image: url("../images/background-image.png");
-  background-size: cover;
-  background-position: center bottom;
-  height: 100vh;
-  /*
-  background: linear-gradient(to right, rgba(#272727, 0.9), rgba(#272727, 0.3)),
-    url("../images/background-image.png") center top;
-  */
+.splash .navigation ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Montserrat", Sans-Serif;
 }
 
 .splash .page-intro {
-  margin: auto;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .splash .page-intro .main-title {
@@ -106,6 +130,7 @@ section {
   font-style: italic;
   text-transform: capitalize;
   font-family: "Raleway", Sans-Serif;
+  letter-spacing: -1px;
 }
 
 .splash .page-intro .main-subtitle {
@@ -114,14 +139,21 @@ section {
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: "Montserrat", Sans-Serif;
+  letter-spacing: -1.88px;
 }
 
 .splash .page-intro .btn {
   padding: 18px 24px;
   font-size: 18px;
+  font-weight: 700;
+  font-family: "Montserrat", Sans-Serif;
+  text-transform: uppercase;
   background: #fed136;
   color: #fff;
   border-radius: 3px;
+  width: 240px;
+  height: 65px;
 }
 
 .splash .page-intro .btn:hover {
@@ -134,7 +166,6 @@ section {
   -ms-flex: 0 0 33.33%;
       flex: 0 0 33.33%;
   max-width: 33.33%;
-  margin: 24px 0 0 0;
 }
 
 .service i {
@@ -151,12 +182,14 @@ section {
   margin: 24px 0 0 0;
   font-size: 18px;
   font-weight: 700;
+  letter-spacing: -0.45;
 }
 
 .service .service-description {
-  margin: 24px 0 0 0;
+  display: block;
   padding: 0 24px;
   font-size: 14px;
+  font-weight: 400;
   color: #777777;
   font-family: "Roboto Slab", Sans-Serif;
 }
@@ -171,31 +204,53 @@ section {
       flex: 0 0 29%;
   max-width: 29%;
   margin: 50px 0 0 0;
-  border: 1px solid black;
+  background: #fff;
 }
 
 .portfolio .portfolio-item img {
   width: 100%;
-  height: 300px;
+  height: 301px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.portfolio .portfolio-item p {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  font-family: "Montserrat", Sans-Serif;
+}
+
+.portfolio .portfolio-item span {
+  display: block;
+  font-size: 14px;
+  color: #777777;
+  font-style: italic;
+  font-family: "Raleway", Sans-Serif;
+  font-weight: 400;
+}
+
 /* Contact */
+.contact {
+  padding: 12px 0;
+}
+
 .contact p {
-  border: 1px solid blue;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", Sans-Serif;
+  letter-spacing: -0.35px;
 }
 
 .contact .social-links {
   list-style-type: none;
-  padding: 0;
-  display: inline;
-  border: 1px solid orange;
+  margin: auto 0;
 }
 
 .contact .social-links li {
   display: inline-block;
   font-size: 0;
+  margin-right: 5px;
 }
 
 .contact .social-links li a {
@@ -209,5 +264,32 @@ section {
   height: 40px;
   border-radius: 50%;
   line-height: 40px;
+}
+
+/* Media */
+@media (max-width: 767px) {
+  .wrapper {
+    display: block;
+  }
+  .service {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+  .portfolio-item {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .splash .page-intro {
+    margin-top: 48px;
+  }
+  .splash .page-intro .main-subtitle {
+    font-size: 52px;
+  }
+  section {
+    padding: 36px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,8 +6,8 @@ $color-text-light: #fff;
 $color-text-dark: #222222;
 $color-text-description: #777777;
 
-$font-header: "Raleway", Sans-Serif;
-$font-text: "Montserrat", Sans-Serif;
+$font-header: "Montserrat", Sans-Serif;
+$font-text: "Raleway", Sans-Serif;
 $font-description: "Roboto Slab", Sans-Serif;
 $font-logo: "Oleo Script", Sans-Serif;
 
@@ -19,8 +19,7 @@ $font-logo: "Oleo Script", Sans-Serif;
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
   color: $color-text-dark;
   font-size: 16px;
   line-height: 1.7;
@@ -28,6 +27,7 @@ html {
   height: 100%;
   text-align: center;
   font-family: $font-text;
+  background: $color-text-dark;
 }
 
 a,
@@ -48,8 +48,7 @@ section {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1424px;
-  border: 1px solid black;
+  max-width: 1098px;
 }
 
 .wrapper {
@@ -64,45 +63,73 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
+  font-family: $font-header;
 }
 
 .section-subtitle {
+  display: block;
   color: $color-text-description;
   font-weight: 400;
   font-style: italic;
+  font-family: $font-text;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1557px;
+  background: $color-text-light;
 }
 
 /* Splash */
 
-.navigation {
-  padding: 12px 0;
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      margin-right: 34px;
-    }
-  }
-}
-
 .splash {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   padding: 0 24px;
+  /*
   background-image: url("../images/background-image.png");
+  */
+  background: linear-gradient(to right, rgba(#272727, 0.9), rgba(#272727, 0.5)),
+    url("../images/background-image.png") center top;
   background-size: cover;
   background-position: center bottom;
-  height: 100vh;
-  /*
-  background: linear-gradient(to right, rgba(#272727, 0.9), rgba(#272727, 0.3)),
-    url("../images/background-image.png") center top;
-  */
+  min-height: 700px;
+  position: relative;
+
+  .navigation {
+    padding: 12px 0;
+    p {
+      color: $color-main;
+      font-family: $font-logo;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 1.3px;
+    }
+
+    ul {
+      margin: auto 0;
+
+      li {
+        display: inline-block;
+        margin-right: 34px;
+
+        a {
+          color: $color-text-light;
+          font-size: 14px;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: $font-header;
+        }
+      }
+    }
+  }
 
   .page-intro {
-    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .main-title {
       margin: 0;
@@ -111,7 +138,8 @@ section {
       font-weight: 400;
       font-style: italic;
       text-transform: capitalize;
-      font-family: $font-header;
+      font-family: $font-text;
+      letter-spacing: -1px;
     }
 
     .main-subtitle {
@@ -120,14 +148,21 @@ section {
       font-size: 75px;
       font-weight: 700;
       text-transform: uppercase;
+      font-family: $font-header;
+      letter-spacing: -1.88px;
     }
 
     .btn {
       padding: 18px 24px;
       font-size: 18px;
+      font-weight: 700;
+      font-family: $font-header;
+      text-transform: uppercase;
       background: $color-main;
       color: $color-text-light;
       border-radius: 3px;
+      width: 240px;
+      height: 65px;
 
       &:hover {
         background: darken($color-main, 3%);
@@ -142,7 +177,6 @@ section {
 .service {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  margin: 24px 0 0 0;
 
   i {
     width: 66px;
@@ -158,12 +192,14 @@ section {
     margin: 24px 0 0 0;
     font-size: 18px;
     font-weight: 700;
+    letter-spacing: -0.45;
   }
 
   .service-description {
-    margin: 24px 0 0 0;
+    display: block;
     padding: 0 24px;
     font-size: 14px;
+    font-weight: 400;
     color: $color-text-description;
     font-family: $font-description;
   }
@@ -178,12 +214,28 @@ section {
     flex: 0 0 29%;
     max-width: 29%;
     margin: 50px 0 0 0;
-    border: 1px solid black;
+    background: $color-text-light;
 
     img {
       width: 100%;
-      height: 300px;
+      height: 301px;
       object-fit: cover;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.45px;
+      font-family: $font-header;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $color-text-description;
+      font-style: italic;
+      font-family: $font-text;
+      font-weight: 400;
     }
   }
 }
@@ -191,18 +243,21 @@ section {
 /* Contact */
 
 .contact {
+  padding: 12px 0;
   p {
-    border: 1px solid blue;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $font-header;
+    letter-spacing: -0.35px;
   }
   .social-links {
     list-style-type: none;
-    padding: 0;
-    display: inline;
-    border: 1px solid orange;
+    margin: auto 0;
 
     li {
       display: inline-block;
       font-size: 0;
+      margin-right: 5px;
 
       a {
         color: $color-text-light;
@@ -217,5 +272,35 @@ section {
         }
       }
     }
+  }
+}
+
+/* Media */
+
+@media (max-width: 767px) {
+  .wrapper {
+    display: block;
+  }
+
+  .service {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .splash .page-intro {
+    margin-top: 48px;
+    .main-subtitle {
+      font-size: 52px;
+    }
+  }
+
+  section {
+    padding: 36px 0;
   }
 }
