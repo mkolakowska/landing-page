@@ -185,6 +185,7 @@ section {
   .service-wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 60px;
   }
 
   .service {
@@ -228,6 +229,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 60px;
   }
 
   .portfolio-item {
@@ -263,7 +265,7 @@ section {
 /* Contact */
 
 .contact {
-  padding: 12px 0;
+  padding: 60px 0;
 
   .contact-wrapper {
     display: flex;
@@ -328,11 +330,12 @@ section {
       font-size: 52px;
     }
 
-    .navigation-wrapper {
-      display: inline-block;
-    }
     .navigation li {
       margin-right: 6px;
+
+      .nav-wrapper {
+        flex-direction: column;
+      }
     }
   }
 
