@@ -38,15 +38,13 @@ section {
   max-width: 1098px;
 }
 
+/*
 .wrapper {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
+*/
 .section-title {
   font-size: 40px;
   color: #222222;
@@ -78,15 +76,22 @@ section {
   /*
   background-image: url("../images/background-image.png");
   */
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.5)), url("../images/background-image.png") center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.5)), url("../images/background-image.png") center center;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   min-height: 700px;
   position: relative;
 }
 
 .splash .navigation {
   padding: 12px 0;
+}
+
+.splash .navigation .nav-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .splash .navigation p {
@@ -162,13 +167,20 @@ section {
 }
 
 /* Services */
-.service {
+.services .service-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services .service {
   -ms-flex: 0 0 33.33%;
       flex: 0 0 33.33%;
   max-width: 33.33%;
 }
 
-.service i {
+.services i {
   width: 66px;
   height: 66px;
   line-height: 66px;
@@ -178,14 +190,14 @@ section {
   border: 3px solid #fed136;
 }
 
-.service .service-title {
+.services .service-title {
   margin: 24px 0 0 0;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.45;
 }
 
-.service .service-description {
+.services .service-description {
   display: block;
   padding: 0 24px;
   font-size: 14px;
@@ -199,10 +211,19 @@ section {
   background: #f7f7f7;
 }
 
+.portfolio .portfolio-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
 .portfolio .portfolio-item {
-  -ms-flex: 0 0 29%;
-      flex: 0 0 29%;
-  max-width: 29%;
+  -ms-flex: 0 0 31%;
+      flex: 0 0 31%;
+  max-width: 31%;
   margin: 50px 0 0 0;
   background: #fff;
 }
@@ -235,16 +256,30 @@ section {
   padding: 12px 0;
 }
 
+.contact .contact-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .contact p {
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat", Sans-Serif;
   letter-spacing: -0.35px;
+  -ms-flex: 0 0 33.33%;
+      flex: 0 0 33.33%;
+  max-width: 33.33%;
+  text-align: left;
 }
 
 .contact .social-links {
   list-style-type: none;
   margin: auto 0;
+  -ms-flex: 0 0 33.33%;
+      flex: 0 0 33.33%;
+  max-width: 33.33%;
 }
 
 .contact .social-links li {
@@ -268,25 +303,31 @@ section {
 
 /* Media */
 @media (max-width: 767px) {
-  .wrapper {
-    display: block;
-  }
-  .service {
+  .services .service {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 48px;
   }
-  .portfolio-item {
+  .portfolio .portfolio-item {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
   }
-  .splash .page-intro {
-    margin-top: 48px;
-  }
   .splash .page-intro .main-subtitle {
     font-size: 52px;
+  }
+  .splash .page-intro .navigation-wrapper {
+    display: inline-block;
+  }
+  .splash .page-intro .navigation li {
+    margin-right: 6px;
+  }
+  .contact .social-links,
+  .contact p {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
   }
   section {
     padding: 36px 0;
